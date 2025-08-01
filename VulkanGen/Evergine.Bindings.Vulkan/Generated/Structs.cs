@@ -12698,6 +12698,28 @@ namespace Evergine.Bindings.Vulkan
 	}
 
 	[StructLayout(LayoutKind.Sequential)]
+	public unsafe partial struct VkPhysicalDeviceDenseGeometryFormatFeaturesAMDX
+	{
+		public VkStructureType sType;
+		public void* pNext;
+		public VkBool32 denseGeometryFormat;
+	}
+
+	[StructLayout(LayoutKind.Sequential)]
+	public unsafe partial struct VkAccelerationStructureDenseGeometryFormatTrianglesDataAMDX
+	{
+		public VkStructureType sType;
+		public void* pNext;
+		public VkDeviceOrHostAddressConstKHR compressedData;
+		public ulong dataSize;
+		public uint numTriangles;
+		public uint numVertices;
+		public uint maxPrimitiveIndex;
+		public uint maxGeometryIndex;
+		public VkCompressedTriangleFormatAMDX format;
+	}
+
+	[StructLayout(LayoutKind.Sequential)]
 	public unsafe partial struct VkPhysicalDeviceDepthClampZeroOneFeaturesKHR
 	{
 		public VkStructureType sType;
